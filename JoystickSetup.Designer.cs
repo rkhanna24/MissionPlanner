@@ -88,6 +88,7 @@
             this.horizontalProgressBar2 = new ArdupilotMega.HorizontalProgressBar();
             this.BUT_detch7 = new ArdupilotMega.Controls.MyButton();
             this.horizontalProgressBar3 = new ArdupilotMega.HorizontalProgressBar();
+            this.CHK_controller = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // CMB_joysticks
@@ -533,10 +534,18 @@
             this.horizontalProgressBar3.Name = "horizontalProgressBar3";
             this.horizontalProgressBar3.Value = 800;
             // 
+            // CHK_controller
+            // 
+            resources.ApplyResources(this.CHK_controller, "CHK_controller");
+            this.CHK_controller.Name = "CHK_controller";
+            this.CHK_controller.UseVisualStyleBackColor = true;
+            this.CHK_controller.CheckedChanged += new System.EventHandler(this.CHK_controller_CheckedChanged);
+            // 
             // JoystickSetup
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CHK_controller);
             this.Controls.Add(this.BUT_detch8);
             this.Controls.Add(this.revCH8);
             this.Controls.Add(this.label13);
@@ -662,5 +671,6 @@
         private System.Windows.Forms.TextBox expo_ch8;
         private HorizontalProgressBar horizontalProgressBar4;
         private System.Windows.Forms.ComboBox CMB_CH8;
+        private System.Windows.Forms.CheckBox CHK_controller;
     }
 }

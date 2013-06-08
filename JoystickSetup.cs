@@ -555,5 +555,10 @@ namespace ArdupilotMega
             if (MainV2.joystick != null)
                 MainV2.joystick.setReverse(8, ((CheckBox)sender).Checked);
         }
+
+        private void CHK_controller_CheckedChanged(object sender, EventArgs e)
+        {
+            MainV2.comPort.MAV.cs.controller_override = !MainV2.comPort.MAV.cs.controller_override;
+        }
     }
 }

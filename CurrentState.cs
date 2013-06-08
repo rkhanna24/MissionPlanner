@@ -438,6 +438,31 @@ namespace ArdupilotMega
         public ushort rcoverridech7 { get; set; }
         public ushort rcoverridech8 { get; set; }
 
+        //controller override
+        public bool controller_override { get; set; }
+        public ushort controlleroverridech1 { get; set; }
+        public ushort controlleroverridech2 { get; set; }
+        public ushort controlleroverridech3 { get; set; }
+        public ushort controlleroverridech4 { get; set; }
+
+        private int trimx, trimy;
+        public int trim_x
+        {
+            get { return trimx; } 
+            set { if (value > -1024 && value < 1024) trimx = value; } 
+        }
+        public int trim_y
+        {
+            get { return trimy; }
+            set { if (value > -1024 && value < 1024) trimy = value; }
+        }
+
+        //Targeting
+        public float target_x1 { get; set; }
+        public float target_y1 { get; set; }
+        public float target_x2 { get; set; }
+        public float target_y2 { get; set; }
+        public float target_speed { get; set; }
 
         private object locker = new object();
         bool useLocation = false;

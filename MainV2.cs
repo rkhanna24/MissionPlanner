@@ -22,6 +22,7 @@ using log4net;
 using ArdupilotMega.Controls;
 using System.Security.Cryptography;
 using ArdupilotMega.Comms;
+using ArdupilotMega.PCTx;
 using ArdupilotMega.Arduino;
 using System.IO.Ports;
 using Transitions;
@@ -79,6 +80,10 @@ namespace ArdupilotMega
         /// joystick static class
         /// </summary>
         public static Joystick joystick = null;
+        /// <summary>
+        /// HID static class for Controller
+        /// </summary>
+        public static Hid hid = new Hid();
         /// <summary>
         /// track last joystick packet sent. used to control rate
         /// </summary>
@@ -141,6 +146,7 @@ namespace ArdupilotMega
         /// </summary>
         GCSViews.FlightData FlightData;
         GCSViews.FlightPlanner FlightPlanner;
+        GCSViews.UAS UAS;
         //GCSViews.ConfigurationView.Setup Configuration;
         GCSViews.Simulation Simulation;
         //GCSViews.Firmware Firmware;
@@ -283,6 +289,7 @@ namespace ArdupilotMega
             {
                 FlightData = new GCSViews.FlightData();
                 FlightPlanner = new GCSViews.FlightPlanner();
+                UAS = new GCSViews.UAS();
                 //Configuration = new GCSViews.ConfigurationView.Setup();
                 Simulation = new GCSViews.Simulation();
                 //Firmware = new GCSViews.Firmware();
@@ -955,12 +962,101 @@ namespace ArdupilotMega
             }
         }
 
+        /** Code taken from www.endurance-rc.com/software.php **/
+        private void FindHid()
+        {
+            if (hid.deviceDetected) return;
+
+            DeviceManagement deviceManager = new DeviceManagement();
+            Boolean deviceFound = false;
+            String[] devicePathName = new String[128];
+            Guid hidGuid = Guid.Empty;
+            Int32 memberIndex = 0;
+            Int32 myProductID = 0x1299;
+            Int32 myVendorID = 0x0925;
+            Boolean success = false;
+
+            try
+            {
+                Hid.HidD_GetHidGuid(ref hidGuid);
+
+                //  Fill an array with the device path names of all attached HIDs.
+                deviceFound = deviceManager.FindDeviceFromGuid(hidGuid, ref devicePathName);
+
+                //  If there is at least one HID, attempt to read the Vendor ID and Product ID
+                //  of each device until there is a match or all devices have been examined.
+                if (deviceFound)
+                {
+                    memberIndex = 0;
+
+                    do
+                    {
+                        hid.hidHandle = FileIO.CreateFile(devicePathName[memberIndex], 0, FileIO.FILE_SHARE_READ | FileIO.FILE_SHARE_WRITE, IntPtr.Zero, FileIO.OPEN_EXISTING, 0, 0);
+
+                        if (!hid.hidHandle.IsInvalid)
+                        {
+
+                            hid.DeviceAttributes.Size = Marshal.SizeOf(hid.DeviceAttributes);
+
+                            success = Hid.HidD_GetAttributes(hid.hidHandle, ref hid.DeviceAttributes);
+
+                            if (success)
+                            {
+                                //  Find out if the device matches the one we're looking for.
+                                if ((hid.DeviceAttributes.VendorID == myVendorID) && (hid.DeviceAttributes.ProductID == myProductID))
+                                {
+                                    hid.deviceDetected = true;
+
+                                    //  Save the DevicePathName for OnDeviceChange().
+                                    hid.devicePathName = devicePathName[memberIndex];
+                                }
+                                else
+                                {
+                                    //  It's not a match, so close the handle.
+                                    hid.deviceDetected = false;
+                                    hid.hidHandle.Close();
+                                }
+                            }
+                            else
+                            {
+                                //  There was a problem in retrieving the information.
+                                hid.deviceDetected = false;
+                                hid.hidHandle.Close();
+                            }
+                        }
+
+                        //  Keep looking until we find the device or there are no devices left to examine.
+                        memberIndex = memberIndex + 1;
+                    }
+                    while (!((hid.deviceDetected || (memberIndex == devicePathName.Length))));
+                }
+
+                if (hid.deviceDetected)
+                {
+                    //  Learn the capabilities of the device.
+                    hid.Capabilities = hid.GetDeviceCapabilities(hid.hidHandle);
+
+                    //  Get handles to use in requesting Input and Output reports.
+                    hid.readHandle = FileIO.CreateFile(hid.devicePathName, FileIO.GENERIC_READ, FileIO.FILE_SHARE_READ | FileIO.FILE_SHARE_WRITE, IntPtr.Zero, FileIO.OPEN_EXISTING, FileIO.FILE_FLAG_OVERLAPPED, 0);
+                    hid.writeHandle = FileIO.CreateFile(hid.devicePathName, FileIO.GENERIC_WRITE, FileIO.FILE_SHARE_READ | FileIO.FILE_SHARE_WRITE, IntPtr.Zero, FileIO.OPEN_EXISTING, 0, 0);
+
+                    //  Flush any waiting reports in the input buffer. (optional)
+                    hid.FlushQueue(hid.readHandle);
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+        }
+
         /// <summary>
         /// thread used to send joystick packets to the MAV
         /// </summary>
         private void joysticksend()
         {
-
             float rate = 50;
             int count = 0;
 
@@ -980,6 +1076,35 @@ namespace ArdupilotMega
                     {
                         //joystick stuff
 
+                        Byte[] hidOutputReportBuffer = null;
+                        if (MainV2.comPort.MAV.cs.controller_override)
+                        {
+                            FindHid();
+                            if (hid.deviceDetected)
+                            {
+                                double[] reportBuffer = new double[hid.Capabilities.OutputReportByteLength];
+                                reportBuffer[0] = 0;
+                                reportBuffer[1] = (MainV2.comPort.MAV.cs.controlleroverridech3 / (double)(65535 / (double)1023));
+                                reportBuffer[2] = (MainV2.comPort.MAV.cs.controlleroverridech3 / (double)(65535 / (double)1023));
+                                reportBuffer[3] = (MainV2.comPort.MAV.cs.controlleroverridech1 / (double)(65535 / (double)1023)) + MainV2.comPort.MAV.cs.trim_x;
+                                reportBuffer[4] = (MainV2.comPort.MAV.cs.controlleroverridech1 / (double)(65535 / (double)1023)) + MainV2.comPort.MAV.cs.trim_x;
+                                reportBuffer[5] = (MainV2.comPort.MAV.cs.controlleroverridech2 / (double)(65535 / (double)1023)) + MainV2.comPort.MAV.cs.trim_y;
+                                reportBuffer[6] = (MainV2.comPort.MAV.cs.controlleroverridech2 / (double)(65535 / (double)1023)) + MainV2.comPort.MAV.cs.trim_y;
+                                reportBuffer[7] = (MainV2.comPort.MAV.cs.controlleroverridech4 / (double)(65535 / (double)1023));
+                                reportBuffer[8] = (MainV2.comPort.MAV.cs.controlleroverridech4 / (double)(65535 / (double)1023));
+
+                                hidOutputReportBuffer = new Byte[hid.Capabilities.OutputReportByteLength];
+                                hidOutputReportBuffer[0] = 0;
+                                hidOutputReportBuffer[1] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[1])) % 256);
+                                hidOutputReportBuffer[2] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[2])) / 256);
+                                hidOutputReportBuffer[3] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[3])) % 256);
+                                hidOutputReportBuffer[4] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[4])) / 256);
+                                hidOutputReportBuffer[5] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[5])) % 256);
+                                hidOutputReportBuffer[6] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[6])) / 256);
+                                hidOutputReportBuffer[7] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[7])) % 256);
+                                hidOutputReportBuffer[8] = (byte)(Math.Max(0, Math.Min(1023, reportBuffer[8])) / 256);
+                            }
+                        }
                         if (joystick != null && joystick.enabled)
                         {
                             MAVLink.mavlink_rc_channels_override_t rc = new MAVLink.mavlink_rc_channels_override_t();
@@ -988,22 +1113,45 @@ namespace ArdupilotMega
                             rc.target_system = comPort.MAV.sysid;
 
                             if (joystick.getJoystickAxis(1) != Joystick.joystickaxis.None)
-                                rc.chan1_raw = MainV2.comPort.MAV.cs.rcoverridech1;//(ushort)(((int)state.Rz / 65.535) + 1000);
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan1_raw = MainV2.comPort.MAV.cs.rcoverridech1;//(ushort)(((int)state.Rz / 65.535) + 1000);
+                            }
                             if (joystick.getJoystickAxis(2) != Joystick.joystickaxis.None)
-                                rc.chan2_raw = MainV2.comPort.MAV.cs.rcoverridech2;//(ushort)(((int)state.Y / 65.535) + 1000);
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan2_raw = MainV2.comPort.MAV.cs.rcoverridech2;//(ushort)(((int)state.Y / 65.535) + 1000);
+                            }
                             if (joystick.getJoystickAxis(3) != Joystick.joystickaxis.None)
-                                rc.chan3_raw = MainV2.comPort.MAV.cs.rcoverridech3;//(ushort)(1000 - ((int)slider[0] / 65.535 ) + 1000);
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan3_raw = MainV2.comPort.MAV.cs.rcoverridech3;//(ushort)(1000 - ((int)slider[0] / 65.535 ) + 1000);
+                            }
                             if (joystick.getJoystickAxis(4) != Joystick.joystickaxis.None)
-                                rc.chan4_raw = MainV2.comPort.MAV.cs.rcoverridech4;//(ushort)(((int)state.X / 65.535) + 1000);
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan4_raw = MainV2.comPort.MAV.cs.rcoverridech4;//(ushort)(((int)state.X / 65.535) + 1000);
+                            }
                             if (joystick.getJoystickAxis(5) != Joystick.joystickaxis.None)
-                                rc.chan5_raw = MainV2.comPort.MAV.cs.rcoverridech5;
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan5_raw = MainV2.comPort.MAV.cs.rcoverridech5;
+                            }
                             if (joystick.getJoystickAxis(6) != Joystick.joystickaxis.None)
-                                rc.chan6_raw = MainV2.comPort.MAV.cs.rcoverridech6;
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan6_raw = MainV2.comPort.MAV.cs.rcoverridech6;
+                            }
                             if (joystick.getJoystickAxis(7) != Joystick.joystickaxis.None)
-                                rc.chan7_raw = MainV2.comPort.MAV.cs.rcoverridech7;
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan7_raw = MainV2.comPort.MAV.cs.rcoverridech7;
+                            }
                             if (joystick.getJoystickAxis(8) != Joystick.joystickaxis.None)
-                                rc.chan8_raw = MainV2.comPort.MAV.cs.rcoverridech8;
-
+                            {
+                                if (!MainV2.comPort.MAV.cs.controller_override)
+                                    rc.chan8_raw = MainV2.comPort.MAV.cs.rcoverridech8;
+                            }
                             if (lastjoystick.AddMilliseconds(rate) < DateTime.Now)
                             {
                                 /*
@@ -1033,14 +1181,23 @@ namespace ArdupilotMega
                                 }
                                  */
                                 //                                Console.WriteLine(DateTime.Now.Millisecond + " {0} {1} {2} {3} {4}", rc.chan1_raw, rc.chan2_raw, rc.chan3_raw, rc.chan4_raw,rate);
-                                comPort.sendPacket(rc);
+
+                                if (MainV2.comPort.MAV.cs.controller_override)
+                                {
+                                    Hid.OutputReportViaInterruptTransfer outputReport = new Hid.OutputReportViaInterruptTransfer();
+                                    outputReport.Write(hidOutputReportBuffer, hid.writeHandle);
+                                }
+                                else
+                                {
+                                    comPort.sendPacket(rc);
+                                }
                                 count++;
                                 lastjoystick = DateTime.Now;
                             }
 
                         }
                     }
-                    Thread.Sleep(20);
+                    Thread.Sleep(5);
                 }
                 catch
                 {
@@ -1426,6 +1583,7 @@ namespace ArdupilotMega
             MyView.AddScreen(new MainSwitcher.Screen("Firmware", new GCSViews.Firmware(), false));
             MyView.AddScreen(new MainSwitcher.Screen("Terminal", new GCSViews.Terminal(), false));
             MyView.AddScreen(new MainSwitcher.Screen("Help", new GCSViews.Help(), false));
+            MyView.AddScreen(new MainSwitcher.Screen("UAS", UAS, true));
 
             // init button depressed - ensures correct action
             //int fixme;
@@ -1511,6 +1669,10 @@ namespace ArdupilotMega
             MyView.ShowScreen("Help");
         }
 
+        private void MenuUAS_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("UAS");
+        }
 
         public static void updateCheckMain(ProgressReporterDialogue frmProgressReporter)
         {

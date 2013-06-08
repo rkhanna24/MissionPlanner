@@ -39,12 +39,13 @@
             this.MenuSimulation = new System.Windows.Forms.ToolStripButton();
             this.MenuFirmware = new System.Windows.Forms.ToolStripButton();
             this.MenuTerminal = new System.Windows.Forms.ToolStripButton();
-            this.MenuHelp = new System.Windows.Forms.ToolStripButton();
+            this.MenuUAS = new System.Windows.Forms.ToolStripButton();
             this.MenuConnect = new System.Windows.Forms.ToolStripButton();
             this.toolStripConnectionControl = new ArdupilotMega.Controls.ToolStripConnectionControl();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu = new ArdupilotMega.Controls.MyButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.MainMenu.SuspendLayout();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,15 +64,16 @@
             this.MenuSimulation,
             this.MenuFirmware,
             this.MenuTerminal,
-            this.MenuHelp,
+            this.toolStripButton1,
+            this.MenuUAS,
             this.MenuConnect,
-            this.toolStripConnectionControl,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.toolStripConnectionControl});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Padding = new System.Windows.Forms.Padding(0);
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MainMenu.Size = new System.Drawing.Size(900, 76);
+            this.MainMenu.Size = new System.Drawing.Size(1200, 76);
             this.MainMenu.Stretch = false;
             this.MainMenu.TabIndex = 5;
             this.MainMenu.Text = "menuStrip1";
@@ -82,7 +84,7 @@
             this.CTX_mainmenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.autoHideToolStripMenuItem});
             this.CTX_mainmenu.Name = "CTX_mainmenu";
-            this.CTX_mainmenu.Size = new System.Drawing.Size(126, 26);
+            this.CTX_mainmenu.Size = new System.Drawing.Size(143, 28);
             // 
             // autoHideToolStripMenuItem
             // 
@@ -90,7 +92,7 @@
             this.autoHideToolStripMenuItem.CheckOnClick = true;
             this.autoHideToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.autoHideToolStripMenuItem.Name = "autoHideToolStripMenuItem";
-            this.autoHideToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.autoHideToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.autoHideToolStripMenuItem.Text = "AutoHide";
             this.autoHideToolStripMenuItem.Click += new System.EventHandler(this.autoHideToolStripMenuItem_Click);
             // 
@@ -182,20 +184,20 @@
             this.MenuTerminal.ToolTipText = "Terminal";
             this.MenuTerminal.Click += new System.EventHandler(this.MenuTerminal_Click);
             // 
-            // MenuHelp
+            // MenuUAS
             // 
-            this.MenuHelp.AutoSize = false;
-            this.MenuHelp.BackgroundImage = global::ArdupilotMega.Properties.Resources.help;
-            this.MenuHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MenuHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MenuHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.MenuHelp.Margin = new System.Windows.Forms.Padding(0);
-            this.MenuHelp.Name = "MenuHelp";
-            this.MenuHelp.Padding = new System.Windows.Forms.Padding(0, 0, 72, 72);
-            this.MenuHelp.Size = new System.Drawing.Size(76, 76);
-            this.MenuHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.MenuHelp.ToolTipText = "Terminal";
-            this.MenuHelp.Click += new System.EventHandler(this.MenuHelp_Click);
+            this.MenuUAS.AutoSize = false;
+            this.MenuUAS.BackgroundImage = global::ArdupilotMega.Properties.Resources.Gaugebg;
+            this.MenuUAS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MenuUAS.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MenuUAS.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.MenuUAS.Margin = new System.Windows.Forms.Padding(0);
+            this.MenuUAS.Name = "MenuUAS";
+            this.MenuUAS.Padding = new System.Windows.Forms.Padding(0, 0, 72, 72);
+            this.MenuUAS.Size = new System.Drawing.Size(76, 76);
+            this.MenuUAS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.MenuUAS.ToolTipText = "Terminal";
+            this.MenuUAS.Click += new System.EventHandler(this.MenuUAS_Click);
             // 
             // MenuConnect
             // 
@@ -219,13 +221,13 @@
             this.toolStripConnectionControl.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripConnectionControl.Name = "toolStripConnectionControl";
             this.toolStripConnectionControl.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.toolStripConnectionControl.Size = new System.Drawing.Size(233, 76);
+            this.toolStripConnectionControl.Size = new System.Drawing.Size(299, 76);
             this.toolStripConnectionControl.MouseLeave += new System.EventHandler(this.MainMenu_MouseLeave);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(57, 76);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(70, 76);
             this.toolStripMenuItem1.Text = "Donate";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -233,8 +235,9 @@
             // 
             this.menu.Dock = System.Windows.Forms.DockStyle.Top;
             this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1008, 23);
+            this.menu.Size = new System.Drawing.Size(1344, 28);
             this.menu.TabIndex = 6;
             this.menu.Text = "Menu";
             this.menu.UseVisualStyleBackColor = true;
@@ -243,26 +246,42 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.MainMenu);
-            this.panel1.Location = new System.Drawing.Point(43, 46);
-            this.panel1.MaximumSize = new System.Drawing.Size(99999, 76);
-            this.panel1.MinimumSize = new System.Drawing.Size(900, 76);
+            this.panel1.Location = new System.Drawing.Point(57, 57);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.MaximumSize = new System.Drawing.Size(133332, 94);
+            this.panel1.MinimumSize = new System.Drawing.Size(1200, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(900, 76);
+            this.panel1.Size = new System.Drawing.Size(1200, 94);
             this.panel1.TabIndex = 7;
             this.panel1.Visible = false;
             this.panel1.MouseLeave += new System.EventHandler(this.MainMenu_MouseLeave);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.BackgroundImage = global::ArdupilotMega.Properties.Resources.help;
+            this.toolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Padding = new System.Windows.Forms.Padding(0, 0, 72, 72);
+            this.toolStripButton1.Size = new System.Drawing.Size(76, 76);
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton1.ToolTipText = "Terminal";
+            // 
             // MainV2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 537);
+            this.ClientSize = new System.Drawing.Size(1344, 661);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.MainMenu;
-            this.MinimumSize = new System.Drawing.Size(1024, 575);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1359, 697);
             this.Name = "MainV2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "APM Planner - By Michael Oborne";
@@ -293,12 +312,13 @@
         private System.Windows.Forms.ToolStripButton MenuTerminal;
         private System.Windows.Forms.ToolStripButton MenuConnect;
 
-        private System.Windows.Forms.ToolStripButton MenuHelp;
+        private System.Windows.Forms.ToolStripButton MenuUAS;
         private Controls.ToolStripConnectionControl toolStripConnectionControl;
         private Controls.MyButton menu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ContextMenuStrip CTX_mainmenu;
         private System.Windows.Forms.ToolStripMenuItem autoHideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

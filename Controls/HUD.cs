@@ -209,7 +209,7 @@ namespace ArdupilotMega.Controls
 
         Pen whitePen = new Pen(Color.White, 2);
 
-        public Image bgimage { set { while (inOnPaint) { } if (_bgimage != null) _bgimage.Dispose(); try { _bgimage = (Image)value.Clone(); } catch { _bgimage = null; } this.Invalidate(); } }
+        public Image bgimage { get { return _bgimage; } set { while (inOnPaint) { } if (_bgimage != null) _bgimage.Dispose(); try { _bgimage = (Image)value.Clone(); } catch { _bgimage = null; } this.Invalidate(); } }
         Image _bgimage;
 
         // move these global as they rarely change - reduce GC
@@ -409,7 +409,7 @@ namespace ArdupilotMega.Controls
             }
         }
 
-        void Clear(Color color)
+        public void Clear(Color color)
         {
             if (opengl)
             {
@@ -775,7 +775,7 @@ namespace ArdupilotMega.Controls
         Pen greenPen = new Pen(Color.Green, 2);
         Pen redPen = new Pen(Color.Red, 2);
 
-        void doPaint(PaintEventArgs e)
+        public virtual void doPaint(PaintEventArgs e)
         {
             //Console.WriteLine("hud paint "+DateTime.Now.Millisecond);
             bool isNaN = false;

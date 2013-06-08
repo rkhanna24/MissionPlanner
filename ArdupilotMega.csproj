@@ -415,6 +415,12 @@
     <Compile Include="Controls\ServoOptions.Designer.cs">
       <DependentUpon>ServoOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\TargetingHUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TargetingHUD.designer.cs">
+      <DependentUpon>TargetingHUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ThemeColors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,7 +448,18 @@
     <Compile Include="GCSViews\ConfigurationView\ConfigAC_Fence.Designer.cs">
       <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
     </Compile>
+    <Compile Include="GCSViews\UAS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GCSViews\UAS.designer.cs">
+      <DependentUpon>UAS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log\BinaryLog.cs" />
+    <Compile Include="PCTx\DeviceManagement.cs" />
+    <Compile Include="PCTx\DeviceManagementDeclarations.cs" />
+    <Compile Include="PCTx\FileIODeclarations.cs" />
+    <Compile Include="PCTx\Hid.cs" />
+    <Compile Include="PCTx\HidDeclarations.cs" />
     <Compile Include="Swarm\Status.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -485,8 +502,14 @@
     <Compile Include="Widgets\QuickView.Designer.cs">
       <DependentUpon>QuickView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\TargetingHUD.resx">
+      <DependentUpon>TargetingHUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\ConfigurationView\ConfigAC_Fence.resx">
       <DependentUpon>ConfigAC_Fence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GCSViews\UAS.resx">
+      <DependentUpon>UAS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Swarm\Status.resx">
       <DependentUpon>Status.cs</DependentUpon>

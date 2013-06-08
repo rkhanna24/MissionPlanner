@@ -293,7 +293,6 @@ namespace ArdupilotMega
                     //joystick stuff
                     joystick.Poll();
                     state = joystick.CurrentJoystickState;
-
                     int[] slider = state.GetSlider();
 
                     if (elevons)
@@ -328,6 +327,44 @@ namespace ArdupilotMega
                         MainV2.comPort.MAV.cs.rcoverridech7 = pickchannel(7, JoyChannels[7].axis, JoyChannels[7].reverse, JoyChannels[7].expo);
                     if (getJoystickAxis(8) != Joystick.joystickaxis.None)
                         MainV2.comPort.MAV.cs.rcoverridech8 = pickchannel(8, JoyChannels[8].axis, JoyChannels[8].reverse, JoyChannels[8].expo);
+
+                    //UAS
+                    if(JoyChannels[1].reverse)
+                        MainV2.comPort.MAV.cs.controlleroverridech1 = (ushort)(65535 - state.X);
+                    else
+                        MainV2.comPort.MAV.cs.controlleroverridech1 = (ushort)state.X;
+                    if (JoyChannels[2].reverse)
+                        MainV2.comPort.MAV.cs.controlleroverridech2 = (ushort)(65535 - state.Y);
+                    else
+                        MainV2.comPort.MAV.cs.controlleroverridech2 = (ushort)state.Y;
+                    if (JoyChannels[3].reverse)
+                        MainV2.comPort.MAV.cs.controlleroverridech3 = (ushort)(65535 - state.GetSlider()[0]);
+                    else
+                        MainV2.comPort.MAV.cs.controlleroverridech1 = (ushort)state.GetSlider()[0];
+                    if (JoyChannels[4].reverse)
+                        MainV2.comPort.MAV.cs.controlleroverridech4 = (ushort)(65535 - state.Rz);
+                    else
+                        MainV2.comPort.MAV.cs.controlleroverridech4 = (ushort)state.Rz;
+
+                    int pov = state.GetPointOfView()[0];
+
+                    switch (pov)
+                    {
+                        case 0: //PITCH UP
+                            MainV2.comPort.MAV.cs.trim_y += 20;
+                            break;
+                        case 9000: //ROLL RIGHT
+                            MainV2.comPort.MAV.cs.trim_x -= 20;
+                            break;
+                        case 18000: //PITCH DOWN
+                            MainV2.comPort.MAV.cs.trim_y -= 20;
+                            break;
+                        case 27000: //ROLL LEFT
+                            MainV2.comPort.MAV.cs.trim_x += 20;
+                            break;
+                        default:
+                            break;
+                    }
 
                     foreach (JoyButton but in JoyButtons)
                     {
