@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ScreenLayout>
+  <Form>
+    <Id>f514cfdf-d903-4511-b989-adb708ad896a</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: </DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Fill</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Fill</Dock>
+    <DockMode>Outer</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>True</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=953, Height=893}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=953,Height=893}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=953,Height=893}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=953, Height=893}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text />
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=953,Height=893}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: </AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>893</Bottom>
+    <Bounds>{X=0,Y=0,Width=953,Height=893}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=953,Height=893}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>3605984</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>893</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>953</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>953</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=0, Height=0}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+  <Form>
+    <Id>f08655a8-82f0-45f7-897d-56a39732b982</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: Quick</DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Right</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Right</Dock>
+    <DockMode>Outer</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>False</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=300, Height=893}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=300,Height=893}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=300,Height=893}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=300, Height=893}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text>Quick</Text>
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=300,Height=893}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: Quick</AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>893</Bottom>
+    <Bounds>{X=0,Y=0,Width=300,Height=893}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=300,Height=893}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>3409624</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>893</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>300</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>300</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=0, Height=888}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+  <Form>
+    <Id>8934303b-369f-477d-975a-e8bebea3925c</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: Hud</DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Left</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Top</Dock>
+    <DockMode>Outer</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>False</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=421, Height=458}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=421,Height=458}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=421,Height=458}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=421, Height=458}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text>Hud</Text>
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=421,Height=458}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: Hud</AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>458</Bottom>
+    <Bounds>{X=0,Y=0,Width=421,Height=458}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=421,Height=458}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>397086</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>458</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>421</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>421</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=0, Height=0}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+  <Form>
+    <Id>758c3d86-d7ee-4cc3-ba1e-e7e56a038bb1</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: Actions</DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Left</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Bottom</Dock>
+    <DockMode>Outer</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>False</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=421, Height=220}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=421,Height=220}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=421,Height=220}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=421, Height=220}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text>Actions</Text>
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=421,Height=220}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: Actions</AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>220</Bottom>
+    <Bounds>{X=0,Y=0,Width=421,Height=220}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=421,Height=220}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>3998992</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>220</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>421</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>421</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=333, Height=122}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+  <Form>
+    <Id>999603e4-f730-4520-93dd-7448b085327d</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: Gauges</DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Left</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Fill</Dock>
+    <DockMode>Outer</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>False</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=421, Height=201}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=421,Height=201}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=421,Height=201}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=421, Height=201}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text>Gauges</Text>
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=421,Height=201}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: Gauges</AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>201</Bottom>
+    <Bounds>{X=0,Y=0,Width=421,Height=201}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=421,Height=201}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>23268026</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>201</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>421</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>421</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=420, Height=140}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+  <Form>
+    <Id>157277df-f7af-41e2-b5df-50d9569fef1d</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: Status</DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Left</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Fill</Dock>
+    <DockMode>Inner</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>False</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=1550, Height=184}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=1550,Height=201}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=1550,Height=201}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=1550, Height=201}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text>Status</Text>
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=1680,Height=184}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: Status</AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>201</Bottom>
+    <Bounds>{X=0,Y=0,Width=1550,Height=201}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=1550,Height=184}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>1639832</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>201</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>1550</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>1550</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=1683, Height=176}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+  <Form>
+    <Id>750ff122-6efd-4df8-8437-57df8050492e</Id>
+    <DockableForm>System.Windows.Forms.Form, Text: Telemetry Logs</DockableForm>
+    <AllowedDock>All</AllowedDock>
+    <HostContainerDock>Left</HostContainerDock>
+    <AutoHideSavedDock>None</AutoHideSavedDock>
+    <Dock>Fill</Dock>
+    <DockMode>Inner</DockMode>
+    <ShowCloseButton>False</ShowCloseButton>
+    <ShowContextMenuButton>False</ShowContextMenuButton>
+    <IsSelected>False</IsSelected>
+    <IsAutoHideMode>False</IsAutoHideMode>
+    <IsDisposed>False</IsDisposed>
+    <ActiveForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ActiveForm>
+    <AllowTransparency>False</AllowTransparency>
+    <AutoScale>False</AutoScale>
+    <AutoScaleBaseSize>{Width=5, Height=13}</AutoScaleBaseSize>
+    <AutoScroll>True</AutoScroll>
+    <AutoSize>False</AutoSize>
+    <AutoSizeMode>GrowOnly</AutoSizeMode>
+    <AutoValidate>EnablePreventFocusChange</AutoValidate>
+    <BackColor>Color [A=255, R=38, G=39, B=40]</BackColor>
+    <FormBorderStyle>None</FormBorderStyle>
+    <ClientSize>{Width=421, Height=394}</ClientSize>
+    <ControlBox>True</ControlBox>
+    <DesktopBounds>{X=0,Y=0,Width=421,Height=394}</DesktopBounds>
+    <DesktopLocation>{X=0,Y=0}</DesktopLocation>
+    <DialogResult>None</DialogResult>
+    <HelpButton>False</HelpButton>
+    <Icon>(Icon)</Icon>
+    <IsMdiChild>False</IsMdiChild>
+    <IsMdiContainer>False</IsMdiContainer>
+    <IsRestrictedWindow>False</IsRestrictedWindow>
+    <KeyPreview>False</KeyPreview>
+    <Location>{X=0,Y=0}</Location>
+    <MaximumSize>{Width=0, Height=0}</MaximumSize>
+    <Margin>{Left=3,Top=3,Right=3,Bottom=3}</Margin>
+    <MinimumSize>{Width=0, Height=0}</MinimumSize>
+    <MaximizeBox>True</MaximizeBox>
+    <MdiChildren>System.Windows.Forms.Form[]</MdiChildren>
+    <MinimizeBox>True</MinimizeBox>
+    <Modal>False</Modal>
+    <Opacity>1</Opacity>
+    <OwnedForms>System.Windows.Forms.Form[]</OwnedForms>
+    <RestoreBounds>{X=0,Y=0,Width=421,Height=394}</RestoreBounds>
+    <RightToLeftLayout>False</RightToLeftLayout>
+    <ShowInTaskbar>False</ShowInTaskbar>
+    <ShowIcon>True</ShowIcon>
+    <Size>{Width=421, Height=394}</Size>
+    <SizeGripStyle>Auto</SizeGripStyle>
+    <StartPosition>WindowsDefaultLocation</StartPosition>
+    <TabIndex>0</TabIndex>
+    <TabStop>True</TabStop>
+    <Text>Telemetry Logs</Text>
+    <TopLevel>False</TopLevel>
+    <TopMost>False</TopMost>
+    <TransparencyKey>Color [Empty]</TransparencyKey>
+    <WindowState>Normal</WindowState>
+    <AutoScaleDimensions>{Width=0, Height=0}</AutoScaleDimensions>
+    <AutoScaleMode>Inherit</AutoScaleMode>
+    <BindingContext>System.Windows.Forms.BindingContext</BindingContext>
+    <CurrentAutoScaleDimensions>{Width=0, Height=0}</CurrentAutoScaleDimensions>
+    <ParentForm>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</ParentForm>
+    <AutoScrollMargin>{Width=0, Height=0}</AutoScrollMargin>
+    <AutoScrollPosition>{X=0,Y=0}</AutoScrollPosition>
+    <AutoScrollMinSize>{Width=0, Height=0}</AutoScrollMinSize>
+    <DisplayRectangle>{X=0,Y=0,Width=421,Height=394}</DisplayRectangle>
+    <HorizontalScroll>System.Windows.Forms.HScrollProperties</HorizontalScroll>
+    <VerticalScroll>System.Windows.Forms.VScrollProperties</VerticalScroll>
+    <DockPadding />
+    <AccessibilityObject>ControlAccessibleObject: Owner = System.Windows.Forms.Form, Text: Telemetry Logs</AccessibilityObject>
+    <AccessibleRole>Default</AccessibleRole>
+    <AllowDrop>False</AllowDrop>
+    <Anchor>Top, Left</Anchor>
+    <AutoScrollOffset>{X=0,Y=0}</AutoScrollOffset>
+    <LayoutEngine>System.Windows.Forms.Layout.DefaultLayout</LayoutEngine>
+    <BackgroundImageLayout>Tile</BackgroundImageLayout>
+    <Bottom>394</Bottom>
+    <Bounds>{X=0,Y=0,Width=421,Height=394}</Bounds>
+    <CanFocus>True</CanFocus>
+    <CanSelect>True</CanSelect>
+    <Capture>False</Capture>
+    <CausesValidation>True</CausesValidation>
+    <ClientRectangle>{X=0,Y=0,Width=421,Height=394}</ClientRectangle>
+    <CompanyName>Microsoft Corporation</CompanyName>
+    <ContainsFocus>False</ContainsFocus>
+    <Controls>System.Windows.Forms.Form+ControlCollection</Controls>
+    <Created>True</Created>
+    <Cursor>[Cursor: Default]</Cursor>
+    <DataBindings>System.Windows.Forms.ControlBindingsCollection</DataBindings>
+    <IsDisposed>False</IsDisposed>
+    <Disposing>False</Disposing>
+    <Dock>None</Dock>
+    <Enabled>True</Enabled>
+    <Focused>False</Focused>
+    <Font>[Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]</Font>
+    <ForeColor>Color [White]</ForeColor>
+    <Handle>2755004</Handle>
+    <HasChildren>True</HasChildren>
+    <Height>394</Height>
+    <IsHandleCreated>True</IsHandleCreated>
+    <InvokeRequired>False</InvokeRequired>
+    <IsAccessible>False</IsAccessible>
+    <IsMirrored>False</IsMirrored>
+    <Left>0</Left>
+    <Name />
+    <Parent>Crom.Controls.Docking.FormsContainer</Parent>
+    <ProductName>Microsoft? .NET Framework</ProductName>
+    <ProductVersion>2.0.50727.5460</ProductVersion>
+    <RecreatingHandle>False</RecreatingHandle>
+    <Right>421</Right>
+    <RightToLeft>No</RightToLeft>
+    <Top>0</Top>
+    <TopLevelControl>ArdupilotMega.MainV2, Text: Mission Planner 1.2.13 mav 1.0</TopLevelControl>
+    <UseWaitCursor>False</UseWaitCursor>
+    <Visible>True</Visible>
+    <Width>421</Width>
+    <WindowTarget>System.Windows.Forms.Control+ControlNativeWindow</WindowTarget>
+    <PreferredSize>{Width=429, Height=88}</PreferredSize>
+    <Padding>{Left=0,Top=0,Right=0,Bottom=0}</Padding>
+    <ImeMode>NoControl</ImeMode>
+  </Form>
+</ScreenLayout>
