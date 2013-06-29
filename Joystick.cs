@@ -210,7 +210,7 @@ namespace ArdupilotMega
 
             joystick.Poll();
 
-            System.Windows.Forms.CustomMessageBox.Show("Please press the joystick button you want assigned to this function after clicking ok");
+            System.Windows.Forms.CustomMessageBox.Show("Please press the joystick button you want assigned to this function after clicking okay");
 
             DateTime start = DateTime.Now;
 
